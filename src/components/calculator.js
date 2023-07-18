@@ -1,11 +1,11 @@
-import CalculaterAnswer from './calculaterAnswar';
-
-const Calculater = () => (
-  <article className="calculater-container">
+import CalculatorAnswer from './calculatorAnswar';
+import calculate from '../logic/calculate';
+const Calculator = () => (
+  <article className="calculator-container">
     <table>
       <tbody>
         <tr>
-          <CalculaterAnswer />
+          <CalculatorAnswer />
         </tr>
         <tr>
           <td>AC</td>
@@ -32,7 +32,7 @@ const Calculater = () => (
           <td>+</td>
         </tr>
         <tr>
-          <td className="calculater-zero-el" colSpan={2}>
+          <td className="calculator-zero-el" colSpan={2}>
             0
           </td>
           <td>.</td>
@@ -43,4 +43,4 @@ const Calculater = () => (
   </article>
 );
 
-export default Calculater;
+export default Calculator;

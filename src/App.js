@@ -1,8 +1,8 @@
-import Calculater from './components/calculater';
+import Calculator from './components/calculator';
 import './styles/App.css';
 
 function App() {
-  return <Calculater />;
+  return <Calculator />;
 }
 
 export default App;
