@@ -3,4 +3,10 @@ const CalculatorAnswer = () => (
     0
   </td>
 );
+CalculatorAnswer.propTypes = {
+  result: PropTypes.string.isRequired,
+  next: PropTypes.string.isRequired,
+  operation: PropTypes.string.isRequired,
+};
+
 export default CalculatorAnswer;
