@@ -1,13 +1,13 @@
-/* Calculater */
+/* calculator */
 :root {
-  --calculater-screen-primary: #e0e0e0;
-  --calculater-screen-ans-primary: #858694;
-  --calculater-screen-last-row: #f5913e;
+  --calculator-screen-primary: #e0e0e0;
+  --calculator-screen-ans-primary: #858694;
+  --calculator-screen-last-row: #f5913e;
   --primary-white: #fff;
   --primary-black: #000;
 }
 
-.calculater-container {
+.calculator-container {
   display: flex;
 }
 
@@ -19,18 +19,18 @@ td {
   width: 10rem;
   height: 5.5rem;
   text-align: center;
-  background-color: var(--calculater-screen-primary);
+  background-color: var(--calculator-screen-primary);
   font-size: 1.4rem;
   font-weight: 500;
   cursor: pointer;
 }
 
 td:last-child {
-  background-color: var(--calculater-screen-last-row);
+  background-color: var(--calculator-screen-last-row);
 }
 
-#calculater-answer-el {
-  background-color: var(--calculater-screen-ans-primary);
+#calculator-answer-el {
+  background-color: var(--calculator-screen-ans-primary);
   text-align: right;
   padding-right: 2.5rem;
   font-size: 2rem;
@@ -44,7 +44,7 @@ td:last-child {
 }
 
 @media (min-width: 764px) {
-  .calculater-container {
+  .calculator-container {
     justify-content: flex-end;
     padding: 8rem 16rem;
   }
