@@ -1,46 +1,10 @@
 import CalculatorAnswer from './calculatorAnswar';
 import calculate from '../logic/calculate';
-const Calculator = () => (
-  <article className="calculator-container">
-    <table>
-      <tbody>
-        <tr>
-          <CalculatorAnswer />
-        </tr>
-        <tr>
-          <td>AC</td>
-          <td>+/-</td>
-          <td>%</td>
-          <td>&#247;</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>8</td>
-          <td>9</td>
-          <td>X</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>5</td>
-          <td>6</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>+</td>
-        </tr>
-        <tr>
-          <td className="calculator-zero-el" colSpan={2}>
-            0
-          </td>
-          <td>.</td>
-          <td>=</td>
-        </tr>
-      </tbody>
-    </table>
-  </article>
-);
-
-export default Calculator;
+  document.body.addEventListener('keydown', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const key = keyevents(e);
+    if (key) {
+      setResult(calculate(result, key));
+    }
+  });
