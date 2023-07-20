@@ -1,3 +1,10 @@
+import { useEffect, useState } from 'react';
+
+export default function Quote() {
+  const [quoteData, setQuote] = useState({});
+  const [isLoading, setisLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+
   useEffect(() => {
     const header = new Headers();
     header.append('x-api-key', 'OVLcX2/3XpWrpr1fR1+FqA==HqgZvSKqav5X8B74');
