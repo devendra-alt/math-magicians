@@ -1,22 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CalculatorAnswer from './calculatorAnswar';
 import calculate from '../logic/calculate';
 import keyevents from '../logic/keyevents';
 
 export default function Calculator() {
   const [result, setResult] = useState({});
+
   function handleClick(event) {
     setResult(calculate(result, event.target.innerText));
   }
 
-  document.body.addEventListener('keydown', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const key = keyevents(e);
-    if (key) {
-      setResult(calculate(result, key));
+  useEffect(() => {
+    function handleKeyDown(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const key = keyevents(e);
+      if (key) {
+        setResult((result) => calculate(result, key));
+      }
     }
-  });
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   return (
     <article className="calculator-container">
