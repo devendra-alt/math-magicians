@@ -52,6 +52,24 @@
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+
+.quote-suffler-tooltip {
+  content: 'reload';
+  background-color: var(--calculator-screen-primary);
+  border: 0.1rem solid var(--default-gray-900);
+  padding: 0.2rem;
+  color: var(--default-gray-900);
+  position: absolute;
+  visibility: hidden;
+  bottom: -2.1rem;
+  right: -3.5rem;
+}
+
+.quote-suffler:hover .quote-suffler-tooltip {
+  visibility: visible;
 }
 
 .utils {
