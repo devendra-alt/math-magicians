@@ -5,6 +5,68 @@
   --calculator-screen-last-row: #f5913e;
   --primary-white: #fff;
   --primary-black: #000;
+  --default-gray-900: #111827;
+  --default-green-400: #34d399;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.quote-container {
+  width: 50rem;
+  min-height: 15rem;
+  padding: 5rem 15rem;
+  text-align: center;
+  border-radius: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  background: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.quote {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.quote-suffler {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--default-green-400);
+  color: var(--default-green-400);
+  background-image: url(../../assets/shuffle.svg);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.utils {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.is-loading-msg {
+  color: var(--default-green-400);
+}
+
+.is-error-msg {
+  color: #f5913e;
+  font-size: 1.8rem;
 }
 
 .calculator-container {
@@ -44,9 +106,12 @@ td:last-child {
 }
 
 @media (min-width: 764px) {
+  #root {
+    flex-direction: row;
+  }
+
   .calculator-container {
     justify-content: flex-end;
-    padding: 8rem 16rem;
   }
 
   table {
