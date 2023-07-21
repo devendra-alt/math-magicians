@@ -1,0 +1,142 @@
+/* calculator */
+:root {
+  --calculator-screen-primary: #e0e0e0;
+  --calculator-screen-ans-primary: #858694;
+  --calculator-screen-last-row: #f5913e;
+  --primary-white: #fff;
+  --primary-black: #000;
+  --default-gray-900: #111827;
+  --default-green-400: #34d399;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.quote-container {
+  text-align: center;
+  border-radius: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  background: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+  padding: 5.2rem 3.2rem;
+}
+
+.quote {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.quote-suffler {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--default-green-400);
+  color: var(--default-green-400);
+  background-image: url(../../assets/shuffle.svg);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+
+.quote-suffler-tooltip {
+  content: 'reload';
+  background-color: var(--calculator-screen-primary);
+  border: 0.1rem solid var(--default-gray-900);
+  padding: 0.2rem;
+  color: var(--default-gray-900);
+  position: absolute;
+  visibility: hidden;
+  bottom: -2.1rem;
+  right: -3.5rem;
+}
+
+.quote-suffler:hover .quote-suffler-tooltip {
+  visibility: visible;
+}
+
+.utils {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.is-loading-msg {
+  color: var(--default-green-400);
+}
+
+.is-error-msg {
+  color: #f5913e;
+  font-size: 1.8rem;
+}
+
+.calculator-container {
+  display: flex;
+}
+
+table {
+  margin: 0 auto;
+}
+
+td {
+  width: 10rem;
+  height: 5.5rem;
+  text-align: center;
+  background-color: var(--calculator-screen-primary);
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+td:last-child {
+  background-color: var(--calculator-screen-last-row);
+}
+
+#calculator-answer-el {
+  background-color: var(--calculator-screen-ans-primary);
+  text-align: right;
+  padding-right: 2.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-white);
+  cursor: auto;
+}
+
+::selection {
+  color: #000;
+}
+
+@media (min-width: 764px) {
+  #root {
+    flex-direction: row;
+  }
+
+  .quote-container {
+    width: 50rem;
+    min-height: 15rem;
+    padding: 5rem 15rem;
+  }
+
+  .calculator-container {
+    justify-content: flex-end;
+  }
+
+  table {
+    margin: 0;
+  }
+}
