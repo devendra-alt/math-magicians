@@ -19,9 +19,6 @@
 }
 
 .quote-container {
-  width: 50rem;
-  min-height: 15rem;
-  padding: 5rem 15rem;
   text-align: center;
   border-radius: 1rem;
   font-family: 'IBM Plex Mono', monospace;
@@ -30,6 +27,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2.2rem;
+  padding: 5.2rem 3.2rem;
 }
 
 .quote {
@@ -108,6 +106,12 @@ td:last-child {
 @media (min-width: 764px) {
   #root {
     flex-direction: row;
+  }
+
+  .quote-container {
+    width: 50rem;
+    min-height: 15rem;
+    padding: 5rem 15rem;
   }
 
   .calculator-container {
