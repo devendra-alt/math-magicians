@@ -5,7 +5,9 @@ const CalculatorAnswer = ({ result, next, operation }) => (
     <p>
       <span>{result}</span>
       <span>{operation}</span>
-      <span>{next}</span>
+      <span>
+        {result === '' && operation === '' && next === '' ? '0' : next}
+      </span>
     </p>
   </td>
 );
