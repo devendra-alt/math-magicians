@@ -22,6 +22,24 @@ export default function calculate(obj, buttonName) {
     };
   }
 
+  if (buttonName === 'Backspace') {
+    if (!obj.next && !obj.operation && obj.total) {
+      return {
+        ...obj,
+        total: `${obj.total.slice(0, -1)}`,
+      };
+    }
+    if (!obj.next && obj.operation) {
+      return {
+        ...obj,
+        operation: '',
+      };
+    }
+    return {
+      ...obj,
+      next: `${obj.next.substring(0, obj.next.length - 1)}`,
+    };
+  }
   if (isNumber(buttonName)) {
     if (buttonName === '0' && obj.next === '0') {
       return {};

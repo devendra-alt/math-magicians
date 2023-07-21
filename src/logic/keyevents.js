@@ -16,5 +16,7 @@ export default function keyevents(event) {
     '0',
   ];
   if (event.key === 'Enter') return '=';
+  if (event.key === 'Escape') return 'AC';
+  if (event.key === 'Backspace') return 'Backspace';
   return keyList.find((val) => val === event.key);
 }
