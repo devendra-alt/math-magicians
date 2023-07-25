@@ -35,6 +35,11 @@ export default function calculate(obj, buttonName) {
         operation: '',
       };
     }
+    if (!obj.next) {
+      return {
+        ...obj,
+      };
+    }
     return {
       ...obj,
       next: `${obj.next.substring(0, obj.next.length - 1)}`,
