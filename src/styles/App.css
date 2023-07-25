@@ -22,7 +22,7 @@
   position: fixed;
   top: 0;
   background-color: var(--calculator-screen-primary);
-  width: 80%;
+  width: 100%;
   padding: 1.5rem 0;
 }
 
@@ -163,6 +163,10 @@ td:last-child {
 @media (min-width: 764px) {
   #root {
     flex-direction: row;
+  }
+
+  .header {
+    width: 80%;
   }
 
   .quote-container {
