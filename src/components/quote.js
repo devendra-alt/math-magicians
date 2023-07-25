@@ -11,8 +11,11 @@ export default function Quote() {
   const [errorMessage, setErrorMessage] = useState(null);
 
   const handlefetchApi = () => {
+    const controller = new AbortController();
+    const { signal } = controller;
     setisLoading(true);
     fetch(URL, {
+      signal,
       method: 'GET',
       headers: header,
     })
@@ -25,6 +28,9 @@ export default function Quote() {
         setisLoading(false);
         setErrorMessage(`error fetching data ${e}`);
       });
+    return () => {
+      controller.abort();
+    };
   };
 
   useEffect(() => handlefetchApi(), []);
