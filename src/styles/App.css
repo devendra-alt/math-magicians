@@ -56,8 +56,12 @@
   font-size: 1.6rem;
 }
 
+.main-landing-page-title {
+  padding-bottom: 2.5rem;
+}
+
 .quote-container {
-  margin-top: 10rem;
+  margin-top: 3rem;
   text-align: center;
   border-radius: 1rem;
   font-family: 'IBM Plex Mono', monospace;
@@ -126,10 +130,19 @@
 
 .calculator-container {
   display: flex;
+  width: 80%;
+  flex-direction: column;
+}
+
+.calculator-text {
+  color: var(--default-gray-900);
+  font-size: 3.4rem;
+  font-weight: 700;
 }
 
 table {
   margin: 0 auto;
+  align-items: center;
 }
 
 td {
@@ -170,13 +183,14 @@ td:last-child {
   }
 
   .quote-container {
-    width: 50rem;
+    width: 80%;
     min-height: 15rem;
     padding: 5rem 15rem;
   }
 
   .calculator-container {
-    justify-content: flex-end;
+    justify-content: space-between;
+    flex-direction: row;
   }
 
   table {
