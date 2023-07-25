@@ -4,6 +4,7 @@ const Home = () => (
   <>
     <Header />
     <main className="main-landing-page">
+      <h1 className="main-landing-page-title">Welcome to our page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
         mollitia, molestiae quas vel sint commodi repudiandae consequuntur
