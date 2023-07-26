@@ -1,7 +1,7 @@
 import calculate from '../logic/calculate';
 import operate from '../logic/operate';
 
-let obj = {
+const obj = {
   total: '450',
   next: '50',
   operation: '+',
@@ -19,8 +19,8 @@ describe('Test calculator logic', () => {
   });
 
   it('shoud return divide by zero', () => {
-    obj['total'] = '0';
-    obj['next'] = '0';
+    obj.total = '0';
+    obj.next = '0';
     const { total } = calculate(obj, '%');
     expect(total).toStrictEqual('0');
   });
