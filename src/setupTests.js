@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import '@testing-library/jest-dom';
-import { server } from './__mocks__/server';
+import server from './__mocks__/server';
 // Establish API mocking before all tests.
 beforeAll(() => server.listen());
 
