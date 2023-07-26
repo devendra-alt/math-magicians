@@ -1,5 +1,6 @@
-import '@testing-library/jest-dom';
+/* eslint-disable */
 
+import '@testing-library/jest-dom';
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {
@@ -17,3 +18,4 @@ beforeAll(() => {
 afterAll(() => {
   console.error = originalError;
 });
+/* eslint-enable */
