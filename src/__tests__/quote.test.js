@@ -6,8 +6,8 @@ import {
   screen,
   waitForElementToBeRemoved,
 } from '@testing-library/react';
-import Quote from '../components/quote.js';
 import React from 'react';
+import Quote from '../components/quote';
 
 describe('renders correctly', () => {
   it('renders correctly', () => {

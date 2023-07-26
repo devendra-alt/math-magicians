@@ -2,9 +2,10 @@ import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import React from 'react';
-import Calculator from '../components/calculator.js';
 import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import Calculator from '../components/calculator';
+
 describe('renders correctly', () => {
   beforeEach(() => {
     render(
@@ -54,12 +55,12 @@ describe('renders correctly', () => {
     expect(answer.textContent).toBe('75');
   });
   it('Backspace should work', async () => {
-    const answer_ = screen.getByLabelText('calculator-answer-p-span-next');
+    const answer = screen.getByLabelText('calculator-answer-p-span-next');
     await userEvent.keyboard('{7}');
     await userEvent.keyboard('{7}');
     await userEvent.keyboard('{7}');
     await userEvent.keyboard('{7}');
     await userEvent.keyboard('{Backspace}');
-    expect(answer_.textContent).toBe('777');
+    expect(answer.textContent).toBe('777');
   });
 });

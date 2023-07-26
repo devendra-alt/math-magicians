@@ -1,8 +1,8 @@
 import { rest } from 'msw';
 
-export const handlers = [
-  rest.get('https://api.api-ninjas.com/v1/quotes', (req, res, ctx) => {
-    return res(
+const handlers = [
+  rest.get('https://api.api-ninjas.com/v1/quotes', (req, res, ctx) =>
+    res(
       ctx.status(200),
       ctx.json([
         {
@@ -12,6 +12,8 @@ export const handlers = [
           category: 'best',
         },
       ])
-    );
-  }),
+    )
+  ),
 ];
+
+export default handlers;

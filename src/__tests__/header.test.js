@@ -11,6 +11,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import Header from '../components/header';
 import App from '../App';
+
 describe('renders correctly', () => {
   beforeEach(() => {
     render(<App />);
@@ -33,9 +34,7 @@ describe('renders correctly', () => {
         <Header />
       </MemoryRouter>
     );
-    waitFor(() =>
-      expect(screen.findByText('Math Magicians')).toBeInTheDocument()
-    );
+    waitFor(() => expect(screen.findByText('Math Magicians')).toBeInTheDocument());
   });
 
   it('should navigate to calculator', async () => {
