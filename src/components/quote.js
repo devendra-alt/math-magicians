@@ -3,7 +3,7 @@ import Header from './header';
 
 const header = new Headers();
 header.append('x-api-key', 'OVLcX2/3XpWrpr1fR1+FqA==HqgZvSKqav5X8B74');
-const URL = 'https://api.api-ninjas.com/v1/quotes?category=';
+const URL = 'https://api.api-ninjas.com/v1/quotes';
 
 export default function Quote() {
   const [quoteData, setQuote] = useState({});
@@ -39,7 +39,9 @@ export default function Quote() {
     return (
       <>
         <Header />
-        <h1 className="is-loading-msg utils">Loading....</h1>
+        <h1 className="is-loading-msg utils" aria-label="loading-msg">
+          Loading....
+        </h1>
       </>
     );
   }
@@ -55,7 +57,9 @@ export default function Quote() {
     <>
       <Header />
       <article className="quote-container">
-        <p className="quote">{quoteData?.quote}</p>
+        <p className="quote" aria-label="quote">
+          {quoteData?.quote}
+        </p>
         <p className="quote-author">{quoteData?.author}</p>
         <button
           type="submit"
