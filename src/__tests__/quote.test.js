@@ -4,11 +4,20 @@ import Quote from "../components/quote.js";
 import React from "react";
 
 describe('renders correctly', () => {
-    it('renders correctly', () => {
-      const tree = renderer.create(
+  it('should print quote on screen', async () => {
+    render(
       <MemoryRouter>
-        < Quote/>
-      </MemoryRouter>).toJSON();
-      expect(tree).toMatchSnapshot();
-    });
+        <Quote />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByLabelText('loading-msg')).toBeInTheDocument();
+
+    await waitForElementToBeRemoved(screen.getByLabelText('loading-msg'));
+    expect(
+      await screen.getByText(
+        'A great empire, like a great cake, is most easily diminished at the edges.'
+      )
+    ).toBeInTheDocument();
   });
+});
