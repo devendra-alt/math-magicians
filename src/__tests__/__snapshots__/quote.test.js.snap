@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly renders correctly 1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <nav
+      className="nav-bar"
+    >
+      <h1
+        className="title"
+      >
+        Math Magicians
+      </h1>
+      <ul
+        className="nav-links"
+      >
+        <li
+          className="nav-link-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-link-item"
+        >
+          <a
+            className="nav-link"
+            href="/calculator"
+            onClick={[Function]}
+          >
+            Calculator
+          </a>
+        </li>
+        <li
+          className="nav-link-item"
+        >
+          <a
+            className="nav-link"
+            href="/quotes"
+            onClick={[Function]}
+          >
+            Quotes
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>,
+  <article
+    className="quote-container"
+  >
+    <p
+      className="quote"
+    />
+    <p
+      className="quote-author"
+    />
+    <button
+      className="quote-suffler"
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="quote-suffler-tooltip"
+      >
+        reload
+      </span>
+    </button>
+  </article>,
+]
+`;
