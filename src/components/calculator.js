@@ -30,7 +30,7 @@ export default function Calculator() {
     <>
       <Header />
       <div className="calculator-container">
-        <p className="calculator-text">Let &apos; s do some math</p>
+        <p className="calculator-text">Let&apos;s do some math</p>
         <article>
           <table>
             <tbody>
