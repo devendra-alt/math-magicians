@@ -1,9 +1,25 @@
-import { MemoryRouter } from "react-router-dom";
-import  renderer from "react-test-renderer" ;
-import Quote from "../components/quote.js";
-import React from "react";
+import '@testing-library/jest-dom';
+import { MemoryRouter } from 'react-router-dom';
+import renderer from 'react-test-renderer';
+import {
+  render,
+  screen,
+  waitForElementToBeRemoved,
+} from '@testing-library/react';
+import Quote from '../components/quote.js';
+import React from 'react';
 
 describe('renders correctly', () => {
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(
+        <MemoryRouter>
+          <Quote />
+        </MemoryRouter>
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
   it('should print quote on screen', async () => {
     render(
       <MemoryRouter>
