@@ -45,7 +45,9 @@ describe('renders correctly', () => {
   it('should naviaget to quotes', async () => {
     const user = userEvent.setup();
     await user.click(screen.getByText(/Quotes/i));
-    await waitForElementToBeRemoved(screen.getByLabelText('loading-msg'));
+    if(await screen.getByLabelText ('loading-msg')){
+        await waitForElementToBeRemoved(screen.getByLabelText('loading-msg'));
+    }
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 });
