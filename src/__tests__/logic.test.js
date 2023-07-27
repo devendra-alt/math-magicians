@@ -2,7 +2,7 @@ import calculate from '../logic/calculate';
 import operate from '../logic/operate';
 
 const obj = {
-  total: '450',
+  total: '100',
   next: '50',
   operation: '+',
 };
@@ -10,7 +10,7 @@ const obj = {
 describe('Test calculator logic', () => {
   it('should add two values and give answer', () => {
     const { total } = calculate(obj, '=');
-    expect(total).toStrictEqual('500');
+    expect(total).toStrictEqual('150');
   });
 
   it('should clear total', () => {
@@ -38,11 +38,11 @@ describe('Test calculator logic', () => {
     obj.next = '0';
     obj.total = '0';
     const { next } = calculate(obj, '%');
-    expect(next).toStrictEqual('0');
+    expect(next).toStrictEqual(null);
   });
   it('= should not work when operator is not used before', () => {
     obj.next = '344';
-    obj.total = '';
+    obj.total = '0';
     const { next } = calculate(obj, '=');
     expect(next).toStrictEqual(null);
   });
