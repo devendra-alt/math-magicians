@@ -24,6 +24,28 @@ describe('Test calculator logic', () => {
     const { total } = calculate(obj, '%');
     expect(total).toStrictEqual('0');
   });
+  it('should add decimal in next', () => {
+    obj.next = '50';
+    const { next } = calculate(obj, '.');
+    expect(next).toStrictEqual('50.');
+  });
+  it('should make running value negetive', () => {
+    obj.next = '100';
+    const { next } = calculate(obj, '+/-');
+    expect(next).toStrictEqual('-100');
+  });
+  it('should not put operator on screen if running value is zero', () => {
+    obj.next = '0';
+    obj.total = '0';
+    const { next } = calculate(obj, '%');
+    expect(next).toStrictEqual('0');
+  });
+  it('= should not work when operator is not used before', () => {
+    obj.next = '344';
+    obj.total = '';
+    const { next } = calculate(obj, '=');
+    expect(next).toStrictEqual(null);
+  });
 });
 
 describe('Test operate logic', () => {
