@@ -13,7 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --verbose --watchAll",
+    "test": "react-scripts test --verbose --watchAll --coverage",
     "eject": "react-scripts eject",
     "eslint": "npx eslint \"**/*.{js,jsx}\" --fix",
     "stylelint": "npx stylelint \"**/*.{css,scss}\" --fix"
