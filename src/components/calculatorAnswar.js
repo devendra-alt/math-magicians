@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 
 const CalculatorAnswer = ({ result, next, operation }) => (
   <td colSpan={4} id="calculator-answer-el">
-    <p>
-      <span>{result}</span>
-      <span>{operation}</span>
-      <span>
+    <p aria-label="calculator-answer-p-el">
+      <span aria-label="calculator-answer-p-span-result">{result}</span>
+      <span aria-label="calculator-answer-p-span">{operation}</span>
+      <span aria-label="calculator-answer-p-span-next">
         {result === '' && operation === '' && next === '' ? '0' : next}
       </span>
     </p>

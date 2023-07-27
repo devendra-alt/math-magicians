@@ -30,7 +30,7 @@ export default function Calculator() {
     <>
       <Header />
       <div className="calculator-container">
-        <p className="calculator-text">Let &apos; s do some math</p>
+        <p className="calculator-text">Let&apos;s do some math</p>
         <article>
           <table>
             <tbody>
@@ -42,39 +42,76 @@ export default function Calculator() {
                 />
               </tr>
               <tr>
-                <td onClick={handleClick}>AC</td>
-                <td onClick={handleClick}>+/-</td>
-                <td onClick={handleClick}>%</td>
-                <td onClick={handleClick}>&#247;</td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  AC
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  +/-
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  %
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  &#247;
+                </td>
               </tr>
               <tr>
-                <td onClick={handleClick}>7</td>
-                <td onClick={handleClick}>8</td>
-                <td onClick={handleClick}>9</td>
-                <td onClick={handleClick}>x</td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  7
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  8
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  9
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  x
+                </td>
               </tr>
               <tr>
-                <td onClick={handleClick}>4</td>
-                <td onClick={handleClick}>5</td>
-                <td onClick={handleClick}>6</td>
-                <td onClick={handleClick}>-</td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  4
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  5
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  6
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  -
+                </td>
               </tr>
               <tr>
-                <td onClick={handleClick}>1</td>
-                <td onClick={handleClick}>2</td>
-                <td onClick={handleClick}>3</td>
-                <td onClick={handleClick}>+</td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  1
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  2
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  3
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  +
+                </td>
               </tr>
               <tr>
                 <td
+                  aria-label="calculator-btn"
                   className="calculator-zero-el"
                   colSpan={2}
                   onClick={handleClick}
                 >
                   0
                 </td>
-                <td onClick={handleClick}>.</td>
-                <td onClick={handleClick}>=</td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  .
+                </td>
+                <td aria-label="calculator-btn" onClick={handleClick}>
+                  =
+                </td>
               </tr>
             </tbody>
           </table>
